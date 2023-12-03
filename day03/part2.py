@@ -26,7 +26,6 @@ def solve(s: str) -> int:
         while j < len(lines[i]):
             myChar = lines[i][j]
             possibleNum = ""
-            possibleNumAdj = False
             gearsToAdd = set() # list of gears this num is adjacent to
 
             while myChar.isdigit():
@@ -36,7 +35,6 @@ def solve(s: str) -> int:
                     y = gear[1]
                     # 1 x/y away
                     if (x == j and abs(y - i) == 1) or (y == i and abs(x - j) == 1) or (abs(x - j) == 1 and abs(y - i) == 1):
-                        possibleNumAdj = True
                         # a number in the part is adj to a gear
                         # add that gear to the list of gears the num is adj to
                         gearsToAdd.add(str(x) + str(y))
@@ -95,4 +93,4 @@ def main() -> int:
 
 
 if __name__ == '__main__':
-    main()
+    test()
