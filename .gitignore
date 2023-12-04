@@ -1,3 +1,6 @@
+# misc
+.idea/
+
 # ignore all input files
 input.txt
 
